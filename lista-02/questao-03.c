@@ -49,17 +49,15 @@ int main()
             vetor3[i++] = vetor1[j];
             vetor3[i++] = vetor2[j];
         }
-        else if (tam1 > tam2)
+        else 
         {
-            // todos os elementos lidos de vetor2
-            // falta preencher vetor3 com os elementos restantes de vetor1
-            vetor3[i++] = vetor1[j];
-        }
-        else
-        {
-            // todos os elementos lidos de vetor1
-            // falta preencher vetor3 com os elementos restantes de vetor2
-            vetor3[i++] = vetor2[j];
+            // uso do operador ternário
+            // se tam1 > tam2: ainda há elementos restantes em vetor1
+               // termina de preencher vetor3 somente com elementos de vetor1
+            // caso contrário
+               // ainda há elementos restantes em vetor2
+               // termina de preencher vetor3 somente com elementos de vetor2
+            vetor3[i++] = (tam1 > tam2) ? vetor1[j] : vetor2[j];
         }
     }
 
